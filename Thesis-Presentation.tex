@@ -156,10 +156,8 @@
 \note[item]{And lastly, we sum up. So let's get cracking.}
 \end{frame}
 
-\clearpage
-
 \section{Introduction}
-\begin{frame}
+\begin{frame}{Introduction}
 \begin{itemize}
 \item Programming and programming languages.
 \note[item]{Beginning with programming languages, they are in the hundereds and thousands.}
@@ -174,10 +172,7 @@ Advantages of Declarative Programming Lloyd, J.W]}
 \end{itemize}
 \end{frame}
 
-\clearpage
-
-\section{Motivation}
-\begin{frame}
+\begin{frame}{Motivation}
 \begin{itemize}
 \item Language classification.
 \note[item]{Languages are classified into categories known paradigms depending on their characteristics.}
@@ -194,10 +189,8 @@ Advantages of Declarative Programming Lloyd, J.W]}
 \end{itemize}
 \end{frame}
 
-\clearpage
 
-\section{Problem Statement}
-\begin{frame}
+\begin{frame}{Problem Statement}
 \begin{itemize}
 \item General purpose programming languages.
 \note[item]{A truly general purpose programming language, GPL, is described which contains facilities for constructing (within the 
@@ -210,7 +203,9 @@ particular domain.}
 \end{itemize}
 \end{frame}
 
-\begin{frame}
+\section{What was done}
+
+\begin{frame}{Languages}
 \begin{itemize}
 \item Selection
 \note[item]{Choosing a language is quite a daunting task. There are costs related to migration, training among others.}
@@ -227,8 +222,8 @@ capabilities.}
 
 \clearpage
 
-\section{Background}
-\begin{frame}
+\begin{frame}{Background}
+
 \begin{itemize}
 \item Functional programming.
 \note[item]{works by applying mathematical functions to arguments to get results. A program is not but functions which can also be passed 
@@ -245,7 +240,8 @@ to other functions as arguments.}
 \end{itemize}
 \end{frame}
 
-\begin{frame}
+
+\begin{frame}{Logic Programming}
 \begin{itemize}
 \item Logic programming.
 \note[item]{is based on formal logic. A program consists of a set of rules used to derive a solution.}
@@ -257,10 +253,8 @@ to other functions as arguments.}
 \end{itemize}
 \end{frame}
 
-\clearpage
 
-\section{Existing and Proposed Work}
-\begin{frame}
+\begin{frame}{Existing and Proposed Work}
 \note[item]{Here we will look at the existing work,}
 \begin{itemize}
 \item Implementations.
@@ -276,7 +270,7 @@ then compile and run it.}
 \end{itemize}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Improvements}
 \note[item]{The improvements,}
 \begin{itemize}
 \item Practical features.
@@ -288,10 +282,7 @@ then compile and run it.}
 \end{itemize}
 \end{frame}
 
-\clearpage
-
-\section{Other Contributions}
-\begin{frame}
+\begin{frame}{Other Contributions}
 \note[item]{In this section we will talk about, the contributions which are not neccessary an improvement on the current work but a new
 direction for solving the problem of embedding languages.}
 \begin{itemize}
@@ -311,14 +302,11 @@ direction for solving the problem of embedding languages.}
 \note[item]{Modularizing the interpreter in a manner so that each stage must only deal with a particular aspect of the program.}
 
 \end{itemize}
-
 \end{frame}
 
 
-\clearpage
 
-\section{Embedding a Programming Language into another Programming Language}
-\begin{frame}
+\begin{frame}{Embedding a Programming Language into another Programming Language}
 \note[item]{This section deals with embedding a target language in the host environement.}
 \note[item]{The aim of this approach to bring the target language functionalities to the host language.}
 \begin{itemize}
@@ -333,15 +321,13 @@ direction for solving the problem of embedding languages.}
 \item Logic programming in \progLang{Haskell}.
 \note[item]{Few unification and backtracking libraries do exist for \progLang{Haskell} which use monads to capture and maintain state.}
 \end{itemize}
-
 \end{frame}
 
 
-\clearpage
 
-\section{Multi Paradigm Languages (Functional Logic Languages)}
 
-\begin{frame}
+
+\begin{frame}{Multi Paradigm Languages (Functional Logic Languages)}
 \note[item]{In this section we talk about languages that exhibit properties from multiple paradigms.}
 \begin{itemize}
 \item Multi paradigm language.
@@ -366,10 +352,15 @@ operations along with two way pattern matching.}
 \end{frame}
 
 
-\clearpage
 
-\section{\progLang{Haskell}}
-\begin{frame}
+\begin{frame}{\progLang{Haskell}}
+\begin{itemize}
+\item
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{\progLang{Prolog}}
 \begin{itemize}
 \item
 \end{itemize}
@@ -377,10 +368,7 @@ operations along with two way pattern matching.}
 \end{frame}
 
 
-\clearpage
-
-\section{\progLang{Prolog}}
-\begin{frame}
+\begin{frame}{Related Concepts}
 \begin{itemize}
 \item
 \end{itemize}
@@ -388,10 +376,10 @@ operations along with two way pattern matching.}
 \end{frame}
 
 
-\clearpage
+\section{What we did}
 
-\section{Related Concepts}
-\begin{frame}
+
+\begin{frame}{Functorizing a language}
 \begin{itemize}
 \item
 \end{itemize}
@@ -399,10 +387,8 @@ operations along with two way pattern matching.}
 \end{frame}
 
 
-\clearpage
 
-\section{Functorizing a language}
-\begin{frame}
+\begin{frame}{Monadic unification}
 \begin{itemize}
 \item
 \end{itemize}
@@ -410,34 +396,19 @@ operations along with two way pattern matching.}
 \end{frame}
 
 
-\clearpage
+\subsection{Prototype 1}
 
-\section{Monadic unification}
-\begin{frame}
-\begin{itemize}
-\item
-\end{itemize}
-
-\end{frame}
-
-
-\clearpage
-
-\section{Prototype 1}
-\begin{frame}
+\begin{frame}{Prototype 1}
 \begin{figure}[H]
   \includegraphics[width=1\textwidth]{Prototype-1-architecture.jpeg}
   \caption{Architecture of Prototype 1}
   \label{fig:proto1-arch}
 \end{figure}
-
 \end{frame}
 
 
-\clearpage
-
-\section{Prototype 2}
-\begin{frame}
+\subsection{Prototype 2}
+\begin{frame}{Prototype 2}
 \begin{figure}[H]
   \includegraphics[width=1\textwidth]{Prototype-2-architecture.jpeg}
   \caption{Architecture of Prototype 2}
@@ -447,10 +418,9 @@ operations along with two way pattern matching.}
 \end{frame}
 
 
-\clearpage
+\subsection{Prototype 3}
 
-\section{Prototype 3}
-\begin{frame}
+\begin{frame}{Prototype 3}
 \begin{figure}[H]
   \includegraphics[width=0.75\textwidth]{Prototype-3-architecture.jpeg}
   \caption{Architecture of Prototype 3}
@@ -459,10 +429,9 @@ operations along with two way pattern matching.}
 \end{frame}
 
 
-\clearpage
+\subsection{Prototype 4}
 
-\section{Prototype 4}
-\begin{frame}
+\begin{frame}{Prototype 4}
 \begin{figure}[H]
   \includegraphics[width=1\textwidth]{Prototype-4-architecture.jpeg}
   \caption{Architecture of Prototype 4}
@@ -471,29 +440,28 @@ operations along with two way pattern matching.}
 \end{frame}
 
 
-\clearpage
+\section{What remains to do}
 
-\section{Future Scope}
-\begin{frame}
+\begin{frame}{Future Scope}
 \begin{itemize}
 \item
 \end{itemize}
 
 \end{frame}
 
-
-\clearpage
-
-\section{Conclusion}
-\begin{frame}
+\begin{frame}{Conclusion}
 \begin{itemize}
 \item
 \end{itemize}
 
 \end{frame}
 
+\begin{frame}{The End}
+\begin{center}
+\Huge Questions?
+\end{center}
+\end{frame}
 
-\clearpage
 
 \section{Bibliography}
 \begin{frame}[allowframebreaks]
