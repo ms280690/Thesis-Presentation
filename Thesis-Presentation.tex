@@ -291,9 +291,25 @@ then compile and run it.}
 \clearpage
 
 \section{Other Contributions}
+\note[item]{In this section we will talk about, the contributions which are not neccessary an improvement on the current work but a new
+direction for solving the problem of embedding languages.}
 \begin{frame}
 \begin{itemize}
-\item
+\item Modular \textit{functorizing} mechanism.
+\note[item]{We open up the language to accomodate meta syntactic variables, custom quantifiers and logic.}
+
+\item Modular \textit{monadic} unification procedure.
+\note[item]{this is to leverage imperative unification algorithms.}
+
+\item Basic working \progLang{Prolog} implementation.
+\note[item]{}
+
+\item Variable search strategies.
+\note[item]{Independent of how the solution search happens our implementation must work.}
+
+\item Embedding IO in an eDSl. 
+\note[item]{Modularizing the interpreter in a manner so that each stage must only deal with a particular aspect of the program.}
+
 \end{itemize}
 
 \end{frame}
