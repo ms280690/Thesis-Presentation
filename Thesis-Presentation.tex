@@ -556,7 +556,7 @@ particular domain.}
  \begin{columns}[T]
   \begin{column}{0.5\textwidth}
    \begin{block}{General Purpose Language}
-    \textcolor{green}{Broad scope} but \textcolor{red}{problem needs to be moulded according to the capability of the language}.
+    \textcolor{dark-green}{Broad scope} but \textcolor{red}{problem needs to be moulded according to the capability of the language}.
     \note[item]{A truly general purpose programming language, GPL, is described which contains facilities for constructing (within the 
      language) new data types as well as facilities for operations performed upon them.[Jan V. Garwick. 1968. Programming Languages: GPL, a 
      truly general purpose language. Commun. ACM 11, 9 (September 1968), 634-638. DOI=http://dx.doi.org/10.1145/364063.364092]}
@@ -565,7 +565,7 @@ particular domain.}
 
   \begin{column}{0.5\textwidth}
    \begin{block}{Special Purpose Language}
-    \textcolor{red}{Limited scope} but \textcolor{green}{easier to express the problem as the suitable capabilities are readily available}. 
+    \textcolor{red}{Limited scope} but \textcolor{dark-green}{easier to express the problem as the suitable capabilities are readily available}. 
  	 \note[item]{A domain specific language is a concise micro language that offers tools and functionalities focused on solving problems 
  	 in a particular domain.} 
    \end{block}
@@ -617,8 +617,8 @@ capabilities.}
 \end{frame}
 
 %% ====================================================================-
-\subsection{Existing and Proposed Work}
-\begin{frame}{Existing and Proposed Work}
+\subsection{Existing Work}
+\begin{frame}{Existing Work}
 \note[item]{Here we will look at the existing work,}
 \begin{itemize}
 \item Implementations.
@@ -634,29 +634,6 @@ then compile and run it.}
 \end{itemize}
 \end{frame}
 
-%% ====================================================================-
-\subsection{Other Contributions}
-\begin{frame}{Other Contributions}
-\note[item]{In this section we will talk about, the contributions which are not neccessary an improvement on the current work but a new
-direction for solving the problem of embedding languages.}
-\begin{itemize}
-\item Modular \textit{functorizing} mechanism.
-\note[item]{We open up the language to accomodate meta syntactic variables, custom quantifiers and logic.}
-
-\item Modular \textit{monadic} unification procedure.
-\note[item]{this is to leverage imperative unification algorithms.}
-
-\item Basic working \progLang{Prolog} implementation.
-\note[item]{}
-
-\item Variable search strategies.
-\note[item]{Independent of how the solution search happens our implementation must work.}
-
-\item Embedding IO in an eDSl. 
-\note[item]{Modularizing the interpreter in a manner so that each stage must only deal with a particular aspect of the program.}
-
-\end{itemize}
-\end{frame}
 
 
 %% ====================================================================-
@@ -685,6 +662,30 @@ direction for solving the problem of embedding languages.}
 \end{itemize}
 \end{frame}
 
+
+%% ====================================================================-
+\subsection{Other Contributions}
+\begin{frame}{Other Contributions}
+\note[item]{In this section we will talk about, the contributions which are not neccessary an improvement on the current work but a new
+direction for solving the problem of embedding languages.}
+\begin{itemize}
+\item Modular \textit{functorizing} mechanism.
+\note[item]{We open up the language to accomodate meta syntactic variables, custom quantifiers and logic.}
+
+\item Modular \textit{monadic} unification procedure.
+\note[item]{this is to leverage imperative unification algorithms.}
+
+\item Basic working \progLang{Prolog} implementation.
+\note[item]{}
+
+\item Variable search strategies.
+\note[item]{Independent of how the solution search happens our implementation must work.}
+
+\item Embedding IO in an eDSL. 
+\note[item]{Modularizing the interpreter in a manner so that each stage must only deal with a particular aspect of the program.}
+
+\end{itemize}
+\end{frame}
 
 %% ====================================================================-
 \subsection{Functorizing a language}
