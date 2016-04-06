@@ -156,6 +156,8 @@
 \note[item]{And lastly, we sum up. So let's get cracking.}
 \end{frame}
 
+%% ====================================================================-
+%% ====================================================================-
 \section{Introduction}
 
 \subsection{Introduction Overview}
@@ -223,7 +225,6 @@ A programming paradigm is a fundamental style of computer programming, a way of 
   \note[item]{}
 \end{frame}
 
-\subsection{Classification}
 \begin{frame}
 \frametitle{Classification}
   \begin{columns}[T]
@@ -246,6 +247,187 @@ Programming languages are classified into paradigms depending on their character
   \note[item]{}
 \end{frame}
 
+
+%% ====================================================================-
+%% ====================================================================-
+\section{Background}
+
+%% ====================================================================-
+\subsection{Overview}
+\begin{frame}{Background Overview}
+	
+	\frametitle{Background Overview}
+	
+\end{frame}
+
+%% ====================================================================-
+\subsection{Functional Programming}
+\begin{frame}{Functional Programming}
+
+\begin{itemize}
+\item Functional programming.
+\note[item]{works by applying mathematical functions to arguments to get results. A program is not but functions which can also be passed 
+to other functions as arguments.}
+
+\item $\lambda$-calculi.
+\note[item]{is a formal system in mathematical logic for expressing computations.}
+\note[item]{The typed variant of $\lambda$-calculi puts restrictions on the type of data a function can work with.}
+
+\item Damas-Hindley-Milner type system.
+\note[item]{provides the ability to give a most general type to a function or program.}
+
+\item For example, \progLang{Haskell}, \progLang{Scheme} and \progLang{Lisp}.
+\end{itemize}
+\end{frame}
+
+%% ====================================================================-
+\subsection{Logic Programming}
+\begin{frame}{Logic Programming}
+\begin{itemize}
+\item Logic programming.
+\note[item]{is based on formal logic. A program consists of a set of rules used to derive a solution.}
+
+\item Universal Horn clauses.
+\note[item]{A Horn clause is a clause (a disjunction of literals) with at most one positive literal.}
+
+\item For example, \progLang{Prolog}.
+\end{itemize}
+\end{frame}
+
+%% ====================================================================-
+\subsection{Existing and Proposed Work}
+\begin{frame}{Existing and Proposed Work}
+\note[item]{Here we will look at the existing work,}
+\begin{itemize}
+\item Implementations.
+\note[item]{Few exist. Incomplete and lack pratical features.}
+
+\item Literature.
+\note[item]{A series of papers provide useful insights into replicating \progLang{Prolog}-like clauses in \progLang{Haskell} though none
+have accompanying implementations.}
+
+\item Libraries.
+\note[item]{Again a few exist and provide only a REPL interface. It is not possible to write a \progLang{Prolog}-like program in a file and
+then compile and run it.}
+\end{itemize}
+\end{frame}
+
+%% ====================================================================-
+\subsection{Improvements}
+\begin{frame}{Improvements}
+\note[item]{The improvements,}
+\begin{itemize}
+\item Practical features.
+\note[item]{Firstly, we added practical features a \progLang{Prolog} distribution might, these being \prologConstruct{cut} and
+\prologConstruct{fail}.}
+
+\item \progLang{Prolog} in \progLang{Haskell}.
+\note[item]{Meaning, one can write a program in our eDSl just like one would write a \progLang{Haskell} program.}
+\end{itemize}
+\end{frame}
+
+%% ====================================================================-
+\subsection{Other Contributions}
+\begin{frame}{Other Contributions}
+\note[item]{In this section we will talk about, the contributions which are not neccessary an improvement on the current work but a new
+direction for solving the problem of embedding languages.}
+\begin{itemize}
+\item Modular \textit{functorizing} mechanism.
+\note[item]{We open up the language to accomodate meta syntactic variables, custom quantifiers and logic.}
+
+\item Modular \textit{monadic} unification procedure.
+\note[item]{this is to leverage imperative unification algorithms.}
+
+\item Basic working \progLang{Prolog} implementation.
+\note[item]{}
+
+\item Variable search strategies.
+\note[item]{Independent of how the solution search happens our implementation must work.}
+
+\item Embedding IO in an eDSl. 
+\note[item]{Modularizing the interpreter in a manner so that each stage must only deal with a particular aspect of the program.}
+
+\end{itemize}
+\end{frame}
+
+
+%% ====================================================================-
+\subsection{Embedding Programming Languages}
+\begin{frame}{Embedding a Programming Language into another Programming Language}
+\note[item]{This section deals with embedding a target language in the host environement.}
+\note[item]{The aim of this approach to bring the target language functionalities to the host language.}
+\begin{itemize}
+\item Embedding \progLang{Prolog}.
+\note[item]{\progLang{Prolog} is a very popular choice for embedding.}
+
+\item Target languages : \progLang{Java, Lisp, Scheme}.
+
+\item \progLang{Prolog} in \progLang{Haskell} : \codeLibrary{Mini Prolog} and \codeLibrary{prolog}.
+\note[item]{A \progLang{Prolog} implementation does exist for an older specification of \progLang{Haskell}.}
+
+\item Logic programming in \progLang{Haskell}.
+\note[item]{Few unification and backtracking libraries do exist for \progLang{Haskell} which use monads to capture and maintain state.}
+\end{itemize}
+\end{frame}
+
+
+
+
+%% ====================================================================-
+\subsection{Multi Paradigm Languages}
+\begin{frame}{Multi Paradigm Languages (Functional Logic Languages)}
+\note[item]{In this section we talk about languages that exhibit properties from multiple paradigms.}
+\begin{itemize}
+\item Multi paradigm language.
+\note[item]{A multi-paradigm programming language is a programming language that supports more than one programming paradigm allowing the 
+programmer to work in a variety of styles.[https://developer.mozilla.org/ar/docs/multiparadigmlanguage.html]}
+
+\item For example, \progLang{Scala}.
+\note[item]{A notable example is \progLang{Scala}, object functional language based on \progLang{Java}. Simply put it is Java with strong 
+funcitonal characteristics such as higher order functions.}
+
+\item Functional Logic programming languages.
+\note[item]{are hybrid declarative languages exhibiting functional and logic programming languages.}
+
+\item For example, \progLang{Curry}.
+\note[item]{is a \progLang{Haskell} based functional logic programming language providing the choice operator for non deterministic
+operations along with two way pattern matching.}
+
+\item Other examples, \progLang{Mercury}.
+\note[item]{which goes the other way round, starting from \progLang{Prolog} and adding \progLang{Haskell} features.}
+\end{itemize}
+
+\end{frame}
+
+
+%% ====================================================================-
+\subsection{\progLang{Haskell}}
+\begin{frame}{\progLang{Haskell}}
+\begin{itemize}
+\item
+\end{itemize}
+
+\end{frame}
+
+%% ====================================================================-
+\subsection{\progLang{Prolog}}
+\begin{frame}{\progLang{Prolog}}
+\begin{itemize}
+\item
+\end{itemize}
+
+\end{frame}
+
+%% ====================================================================-
+\subsection{Related Concepts}
+\begin{frame}{Related Concepts}
+\begin{itemize}
+\item
+\end{itemize}
+
+\end{frame}
+
+
 \subsection{Declarative Programming}
 \begin{frame}
 \frametitle{Declarative Programming}
@@ -266,6 +448,7 @@ Advantages of Declarative Programming Lloyd, J.W]}
 \end{itemize}
 \end{frame}
 
+%% ====================================================================-
 \subsection{Functional Programming}
 \begin{frame}
 \frametitle{Functional Programming}
@@ -289,6 +472,7 @@ Programming in a functional language consists of building definitions and using 
   \end{columns}
 \end{frame}
 
+%% ====================================================================-
 \subsection{\progLang{Haskell}}
 \begin{frame}
 \frametitle{\progLang{Haskell}}
@@ -312,6 +496,7 @@ Programming in a functional language consists of building definitions and using 
 \end{frame}
 
 
+%% ====================================================================-
 \subsection{Motivation}
 \begin{frame}{Motivation}
 \frametitle{(to be discarded ......)}
@@ -331,6 +516,7 @@ Programming in a functional language consists of building definitions and using 
 \end{itemize}
 \end{frame}
 
+%% ====================================================================-
 \subsection{Scope}
 \begin{frame}{Scope}
 	\note[item]{The versatility of a programming language is how well it can adapt to a particular problem.}
@@ -358,6 +544,7 @@ Programming in a functional language consists of building definitions and using 
  
 \end{frame}
 
+%% ====================================================================-
 \subsection{Discarded Scope}
 \begin{frame}{Scope}
 \frametitle{(to be discarded ......)}
@@ -373,8 +560,11 @@ particular domain.}
 \end{itemize}
 \end{frame}
 
+%% ====================================================================-
+%% ====================================================================-
 \section{What was done}
 
+%% ====================================================================-
 \subsection{Overview}
 \begin{frame}{What was done Overview}
 \frametitle{What was done Overview}
@@ -385,6 +575,7 @@ particular domain.}
 	
 \end{frame}
 
+%% ====================================================================-
 \subsection{Languages}
 \begin{frame}{Languages}
 \begin{itemize}
@@ -401,177 +592,12 @@ capabilities.}
 
 \end{frame}
 
-\clearpage
 
-\section{Background}
-
-\subsection{Overview}
-\begin{frame}{Background Overview}
-	
-	\frametitle{Background Overview}
-	
-\end{frame}
-
-\subsection{Functional Programming}
-\begin{frame}{Functional Programming}
-
-\begin{itemize}
-\item Functional programming.
-\note[item]{works by applying mathematical functions to arguments to get results. A program is not but functions which can also be passed 
-to other functions as arguments.}
-
-\item $\lambda$-calculi.
-\note[item]{is a formal system in mathematical logic for expressing computations.}
-\note[item]{The typed variant of $\lambda$-calculi puts restrictions on the type of data a function can work with.}
-
-\item Damas-Hindley-Milner type system.
-\note[item]{provides the ability to give a most general type to a function or program.}
-
-\item For example, \progLang{Haskell}, \progLang{Scheme} and \progLang{Lisp}.
-\end{itemize}
-\end{frame}
-
-\subsection{Logic Programming}
-\begin{frame}{Logic Programming}
-\begin{itemize}
-\item Logic programming.
-\note[item]{is based on formal logic. A program consists of a set of rules used to derive a solution.}
-
-\item Universal Horn clauses.
-\note[item]{A Horn clause is a clause (a disjunction of literals) with at most one positive literal.}
-
-\item For example, \progLang{Prolog}.
-\end{itemize}
-\end{frame}
-
-\subsection{Existing and Proposed Work}
-\begin{frame}{Existing and Proposed Work}
-\note[item]{Here we will look at the existing work,}
-\begin{itemize}
-\item Implementations.
-\note[item]{Few exist. Incomplete and lack pratical features.}
-
-\item Literature.
-\note[item]{A series of papers provide useful insights into replicating \progLang{Prolog}-like clauses in \progLang{Haskell} though none
-have accompanying implementations.}
-
-\item Libraries.
-\note[item]{Again a few exist and provide only a REPL interface. It is not possible to write a \progLang{Prolog}-like program in a file and
-then compile and run it.}
-\end{itemize}
-\end{frame}
-
-\subsection{Improvements}
-\begin{frame}{Improvements}
-\note[item]{The improvements,}
-\begin{itemize}
-\item Practical features.
-\note[item]{Firstly, we added practical features a \progLang{Prolog} distribution might, these being \prologConstruct{cut} and
-\prologConstruct{fail}.}
-
-\item \progLang{Prolog} in \progLang{Haskell}.
-\note[item]{Meaning, one can write a program in our eDSl just like one would write a \progLang{Haskell} program.}
-\end{itemize}
-\end{frame}
-
-\subsection{Other Contributions}
-\begin{frame}{Other Contributions}
-\note[item]{In this section we will talk about, the contributions which are not neccessary an improvement on the current work but a new
-direction for solving the problem of embedding languages.}
-\begin{itemize}
-\item Modular \textit{functorizing} mechanism.
-\note[item]{We open up the language to accomodate meta syntactic variables, custom quantifiers and logic.}
-
-\item Modular \textit{monadic} unification procedure.
-\note[item]{this is to leverage imperative unification algorithms.}
-
-\item Basic working \progLang{Prolog} implementation.
-\note[item]{}
-
-\item Variable search strategies.
-\note[item]{Independent of how the solution search happens our implementation must work.}
-
-\item Embedding IO in an eDSl. 
-\note[item]{Modularizing the interpreter in a manner so that each stage must only deal with a particular aspect of the program.}
-
-\end{itemize}
-\end{frame}
-
-
-\subsection{Embedding a Programming Language into another Programming Language}
-\begin{frame}{Embedding a Programming Language into another Programming Language}
-\note[item]{This section deals with embedding a target language in the host environement.}
-\note[item]{The aim of this approach to bring the target language functionalities to the host language.}
-\begin{itemize}
-\item Embedding \progLang{Prolog}.
-\note[item]{\progLang{Prolog} is a very popular choice for embedding.}
-
-\item Target languages : \progLang{Java, Lisp, Scheme}.
-
-\item \progLang{Prolog} in \progLang{Haskell} : \codeLibrary{Mini Prolog} and \codeLibrary{prolog}.
-\note[item]{A \progLang{Prolog} implementation does exist for an older specification of \progLang{Haskell}.}
-
-\item Logic programming in \progLang{Haskell}.
-\note[item]{Few unification and backtracking libraries do exist for \progLang{Haskell} which use monads to capture and maintain state.}
-\end{itemize}
-\end{frame}
-
-
-
-
-\subsection{Multi Paradigm Languages}
-\begin{frame}{Multi Paradigm Languages (Functional Logic Languages)}
-\note[item]{In this section we talk about languages that exhibit properties from multiple paradigms.}
-\begin{itemize}
-\item Multi paradigm language.
-\note[item]{A multi-paradigm programming language is a programming language that supports more than one programming paradigm allowing the 
-programmer to work in a variety of styles.[https://developer.mozilla.org/ar/docs/multiparadigmlanguage.html]}
-
-\item For example, \progLang{Scala}.
-\note[item]{A notable example is \progLang{Scala}, object functional language based on \progLang{Java}. Simply put it is Java with strong 
-funcitonal characteristics such as higher order functions.}
-
-\item Functional Logic programming languages.
-\note[item]{are hybrid declarative languages exhibiting functional and logic programming languages.}
-
-\item For example, \progLang{Curry}.
-\note[item]{is a \progLang{Haskell} based functional logic programming language providing the choice operator for non deterministic
-operations along with two way pattern matching.}
-
-\item Other examples, \progLang{Mercury}.
-\note[item]{which goes the other way round, starting from \progLang{Prolog} and adding \progLang{Haskell} features.}
-\end{itemize}
-
-\end{frame}
-
-
-\subsection{\progLang{Haskell}}
-\begin{frame}{\progLang{Haskell}}
-\begin{itemize}
-\item
-\end{itemize}
-
-\end{frame}
-
-\subsection{\progLang{Prolog}}
-\begin{frame}{\progLang{Prolog}}
-\begin{itemize}
-\item
-\end{itemize}
-
-\end{frame}
-
-\subsection{Related Concepts}
-\begin{frame}{Related Concepts}
-\begin{itemize}
-\item
-\end{itemize}
-
-\end{frame}
-
-
+%% ====================================================================-
+%% ====================================================================-
 \section{What we did}
 
+%% ====================================================================-
 \subsection{Overview}
 \begin{frame}{What we did Overview}
 	
@@ -579,6 +605,7 @@ operations along with two way pattern matching.}
 	
 \end{frame}
 
+%% ====================================================================-
 \subsection{Functorizing a language}
 \begin{frame}{Functorizing a language}
 \begin{itemize}
@@ -588,6 +615,7 @@ operations along with two way pattern matching.}
 \end{frame}
 
 
+%% ====================================================================-
 \subsection{Monadic unification}
 \begin{frame}{Monadic unification}
 \begin{itemize}
@@ -597,6 +625,7 @@ operations along with two way pattern matching.}
 \end{frame}
 
 
+%% ====================================================================-
 \subsection{Prototype 1}
 \begin{frame}
 \frametitle{Contributions}
@@ -614,6 +643,7 @@ operations along with two way pattern matching.}
 \end{frame}
 
 
+%% ====================================================================-
 \subsection{Prototype 2}
 
 \begin{frame}
@@ -633,6 +663,7 @@ operations along with two way pattern matching.}
 \end{frame}
 
 
+%% ====================================================================-
 \subsection{Prototype 3}
 
 \begin{frame}
@@ -651,6 +682,7 @@ operations along with two way pattern matching.}
 \end{frame}
 
 
+%% ====================================================================-
 \subsection{Prototype 4}
 
 \begin{frame}
@@ -670,8 +702,11 @@ operations along with two way pattern matching.}
 \end{frame}
 
 
+%% ====================================================================-
+%% ====================================================================-
 \section{What remains to do}
 
+%% ====================================================================-
 \subsection{Overview}
 \begin{frame}{What remains to do Overview}
 	
@@ -679,6 +714,7 @@ operations along with two way pattern matching.}
 	
 \end{frame}
 
+%% ====================================================================-
 \subsection{Future Scope}
 \begin{frame}{Future Scope}
 \begin{itemize}
@@ -687,6 +723,8 @@ operations along with two way pattern matching.}
 
 \end{frame}
 
+%% ====================================================================-
+%% ====================================================================-
 \section{Conclusion}
 \begin{frame}{Conclusion}
 \begin{itemize}
@@ -695,11 +733,9 @@ operations along with two way pattern matching.}
 
 \end{frame}
 
-\section{The End}
-
 \begin{frame}{The End}
 \begin{center}
-\Huge Thank you
+\Huge Thank you!
 \end{center}
 \end{frame}
 
