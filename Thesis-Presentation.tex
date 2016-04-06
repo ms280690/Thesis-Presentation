@@ -394,6 +394,24 @@ for goals in the body of the clause.
 
 %% ====================================================================-
 \subsection{Embedding Programming Languages}
+
+\begin{frame}
+\frametitle{Embedding Languages}
+
+Implementing a language within another language.
+
+\begin{enumerate}
+\item Foreign Function Interface (FFI)
+ \\* A mechanism by which a program written in one programming language can make use of services written in another language. 
+\\* For example, \progLang{Haskell} provides a mechanism to embed \progLang{C} code in its programs.
+
+\item Library or Module Extension
+\\* Replicate the features and characteristics of the target language into the host. 
+\\* For example, \progLang{LogLisp} is \progLang{Prolog} library for \progLang{Lisp}. 
+\end{enumerate}
+\note[item]{}
+\end{frame}
+
 \begin{frame}{Embedding a Programming Language into another Programming Language}
 \note[item]{This section deals with embedding a target language in the host environement.}
 \note[item]{The aim of this approach to bring the target language functionalities to the host language.}
