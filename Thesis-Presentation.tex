@@ -1105,6 +1105,12 @@ direction for solving the problem of embedding languages.}
   \caption{Architecture of Prototype 4}
   \label{fig:proto1-arch}
 \end{figure}
+\note[item]{Consider Protoype 4.}
+\note[item]{A program is written in a DSL is interpreted into a Result data type }
+\note[item]{This consists of IO operations as constructors.}
+\note[item]{The result is then run in the IO Monad(stage 2) producing the desired effects.}
+\note[item]{So if the program does not consist of any IO operations the procedure remains pure through out.}
+\note[item]{If it does, no problem the execution takes place in a monad anyways.}
 \end{frame}
 
 
