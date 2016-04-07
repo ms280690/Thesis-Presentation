@@ -1081,8 +1081,20 @@ direction for solving the problem of embedding languages.}
 
 \begin{frame}
 \frametitle{Contributions}
+
 \begin{itemize}
-\item
+\item Embedding input-output capabilities to a domain specific language.
+\note[item]{Here we focus on embedding IO.}
+
+\item Constructors for IO operations in the abstract syntax.
+\note[item]{By defining constructors for IO operations in the language itself.}
+\note[item]{one reason why this can be done is that funcitons in \progLang{Haskell} are first class citizens; they are data.}
+
+\item Interpreted program is pure.
+\note[item]{upon interpretation the program is still pure as no actions has been executed.}
+
+\item Multi-stage interpretation strategy.
+\note[item]{Because of this we can have a multi stage interpretation strategy.}
 \end{itemize}
 \end{frame}
 
