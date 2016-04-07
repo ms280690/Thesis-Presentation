@@ -358,11 +358,25 @@ add x y = x + y
 \subsection{\progLang{Haskell}}
 \begin{frame}
 \frametitle{\progLang{Haskell}}
+ \note[item]{One such language is \progLang{Haskell}.} 
   \begin{columns}[T]
     \begin{column}{.7\textwidth}
      \begin{block}{}
-\progLang{Haskell} is an advanced purely-functional programming language. In particular, it is a polymorphically statically typed, lazy, purely functional language.
-\note[item]{}
+\progLang{Haskell} is an advanced purely-functional programming language. In particular, it is a 
+\begin{itemize}
+\item Polymorphically statically typed,
+\note[item]{Every expression in Haskell has a type which is determined at compile time.}
+
+\item Type inference,
+\note[item]{You don't have to explicitly write out every type in a Haskell program.}
+
+\item Lazy,
+\note[item]{Functions don't evaluate their arguments until required.}
+
+\item Purely Functional.
+\note[item]{Every function in Haskell is a function in the mathematical sense (i.e., "pure").}
+\end{itemize}
+
     \end{block}
     \end{column}
     \begin{column}{.3\textwidth}
