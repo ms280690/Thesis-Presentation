@@ -735,27 +735,65 @@ capabilities.}
 \frametitle{What was done Overview}
 \note[item]{In this section we take a look at the literature and current implementations of \progLang{Prolog} in \progLang{Haskell}.}
 \begin{itemize}
-\item
+\item Literature. 
+
+\item \progLang{Prolog} implementations in \progLang{Haskell}.
+
+\item Libraries to replicate logic programming functionalities.
+
+\item Functional Logic Programming Languages.
 \end{itemize}
 	
 \end{frame}
 
 %% ====================================================================-
 \subsection{Existing Work}
-\begin{frame}{Existing Work}
+\begin{frame}
+\frametitle{Existing Work}
 \note[item]{Here we will look at the existing work,}
 \begin{itemize}
 \item Implementations.
 \note[item]{Few exist. Incomplete and lack pratical features.}
+\begin{itemize}
+\item \codeLibrary{Mini Prolog} : \progLang{Prolog}-interpreter with support for variable search strategies.
+\note[item]{micro \progLang{Prolog}-like language consisting only of atoms and variables. The interpreter can work with multiple strategies predetermined at compile time.}
+
+\item \codeLibrary{prolog} : A \progLang{Prolog} interpreter written in \progLang{Haskell}.
+\note[item]{is a more complete implementation consusting of \prologConstruct{cuts} and \prologConstruct{fails}.}
+
+\item \progLang{Curry} : A functional logic programming based on \progLang{Haskell}
+\note[item]{Works on the principles of residuation and narrowing to unify terms.}
+\end{itemize}
 
 \item Literature.
+\note[item]{The literature mainly focuses on,}
+\begin{itemize}
+\item Translating \progLang{Prolog} predicates into a \progLang{Haskell} function.
 \note[item]{A series of papers provide useful insights into replicating \progLang{Prolog}-like clauses in \progLang{Haskell} though none
-have accompanying implementations.}
+	have accompanying implementations.}
+
+\item Passing state of a computation.
+\note[item]{state of each step in computation is passed on as a stream of answer substitutions,}
+
+\item Implementing a typed functional logic programming language.
+\note[item]{T6o get full static typing we need to use the \progLang{Haskell} extensions of quantified types and the \haskellConstruct{ST Monad}.}
+\end{itemize}
 
 \item Libraries.
-\note[item]{Again a few exist and provide only a REPL interface. It is not possible to write a \progLang{Prolog}-like program in a file and
-then compile and run it.}
+\begin{itemize}
+\item \codeLibrary{unification-fd} : Generic unification algorithms. 
+\note[item]{generic unification algorithms which are imperative in nature.}
+
+\item \codeLibrary{logict} : A continuation-based, backtracking, logic programming monad.
+\note[item]{which allows us to add backtracking computations to any Haskell monad}
+
+\item \codeLibrary{}
+\note[item]{}
+
 \end{itemize}
+
+\end{itemize}
+
 \end{frame}
 
 
