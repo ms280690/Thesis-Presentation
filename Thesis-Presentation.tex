@@ -954,10 +954,28 @@ data Extended f = New_Constructor_1 ...
 \end{frame}
 
 %% ====================================================================-
-\subsection{Monadic unification}
-\begin{frame}{Monadic unification}
+\subsection{Monadic Unification}
+\begin{frame}
+\frametitle{Monadic Unification}
+\note[item]{Here, we make use of the \codeLibrary{unification-fd} library }
 \begin{itemize}
-\item
+\item \codeLibrary{unification-fd} compatible
+\note[item]{Here, we make use of the \codeLibrary{unification-fd} library for providing the generic unification algorithm.}
+
+\item \textit{Unifiable} language.
+\note[item]{We create the necessary instances and make our language unifiable.}
+
+\item Convert the language expressions,    
+\note[item]{Convert the terms into \haskellConstruct{UTerm}}
+
+\item Extract and convert variables to become \haskellConstruct{State} compatible,
+\note[item]{the language varaibles are comnverted to state varaibles which store, pass and mutate values.}
+
+\item Carry out unification in the \haskellConstruct{Binding Monad}.
+\note[item]{The variables are bound to values representing substituions}
+
+\item Re translate substitutions.
+\note[item]{Extract state from the monad and translate the substitutions to the original language.}
 \end{itemize}
 
 \end{frame}
