@@ -807,11 +807,45 @@ capabilities.}
 \begin{frame}{What we did Overview}
 	
 	\frametitle{What we did Overview}
+\begin{itemize}
+\item Improvements,
+\begin{itemize}
+	\item Practical features.
+	\note[item]{Firstly, we added practical features a \progLang{Prolog} distribution might, these being \prologConstruct{cut} and
+		\prologConstruct{fail}.}
 	
+	\item \progLang{Prolog} in \progLang{Haskell}.
+	\note[item]{Meaning, one can write a program in our eDSl just like one would write a \progLang{Haskell} program.}
+\end{itemize}
+
+\item Other Contributions,
+note[item]{In this section we will talk about, the contributions which are not neccessary an improvement on the current work but a new
+	direction for solving the problem of embedding languages.}
+\begin{itemize}
+	\item Modular \textit{functorizing} mechanism.
+	\note[item]{We open up the language to accomodate meta syntactic variables, custom quantifiers and logic.}
+	
+	\item Modular \textit{monadic} unification procedure.
+	\note[item]{this is to leverage imperative unification algorithms.}
+	
+	\item Basic working \progLang{Prolog} implementation.
+	\note[item]{}
+	
+	\item Variable search strategies.
+	\note[item]{Independent of how the solution search happens our implementation must work.}
+	
+	\item Embedding IO in an eDSL. 
+	\note[item]{Modularizing the interpreter in a manner so that each stage must only deal with a particular aspect of the program.}
+	
+\end{itemize}
+\
+\end{itemize}
+
 \end{frame}
 
 %% ====================================================================-
-\subsection{Improvements}
+\begin{comment}
+	\subsection{Improvements}
 \begin{frame}{Improvements}
 \note[item]{The improvements,}
 \begin{itemize}
@@ -824,9 +858,11 @@ capabilities.}
 \end{itemize}
 \end{frame}
 
+\end{comment}
 
 %% ====================================================================-
-\subsection{Other Contributions}
+\begin{comment}
+	\subsection{Other Contributions}
 \begin{frame}{Other Contributions}
 \note[item]{In this section we will talk about, the contributions which are not neccessary an improvement on the current work but a new
 direction for solving the problem of embedding languages.}
@@ -849,6 +885,7 @@ direction for solving the problem of embedding languages.}
 \end{itemize}
 \end{frame}
 
+\end{comment}
 %% ====================================================================-
 \subsection{Functorizing a language}
 \begin{frame}{Functorizing a language}
