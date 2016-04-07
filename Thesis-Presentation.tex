@@ -1000,8 +1000,30 @@ direction for solving the problem of embedding languages.}
 
 \begin{frame}
 \frametitle{Contributions}
+\note[item]{For a logic programming language,}
 \begin{itemize}
-\item
+\item A query resolver matches a query to the rules in the knowledge base and generate a list of goals which when achieved a result is returned.
+\note[item]{A query resolver matches a query to the rules in the knowledge base and generate a list of goals which when achieved a result is returned.}
+
+\item A query resolver consists of,
+\begin{itemize}
+\item a scheduling policy,
+\note[item]{ defines how the additions and deletions of goals from the resolvent is performed by the interpreter.}
+
+\item a search strategy,
+\note[item]{selecting possible alternatives while searching through a solution space.}
+
+\item unification.
+\note[item]{unify the terms in question to obtain a result.}
+\end{itemize}  
+
+\item Prototype 1 is only unification.
+\note[item]{Prototype 1 is only unification.}
+
+\item Prototype 2 is a \progLang{Prolog}-like interpreter.
+\note[item]{The base implementation is taken from an already existing library for \progLang{Prolog} in \progLang{Haskell} and modified to accomodate an open grammar for the language and monadic unification.}
+\note[item]{This prototype serves as a test to prove the modularity and flexibility of the procedures from prototype 1.}
+
 \end{itemize}
 \end{frame}
 
