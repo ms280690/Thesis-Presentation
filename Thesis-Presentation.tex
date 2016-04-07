@@ -886,108 +886,98 @@ direction for solving the problem of embedding languages.}
 \end{frame}
 
 \end{comment}
-%% ====================================================================-
-\subsection{Functorizing a language}
-\begin{frame}[fragile=singleslide]
-\frametitle{{Functorizing a language}}
-\begin{itemize}
-\item Consider the following recursive grammar,
-
-
-$1.  S \rightarrow aSb$
-
-
-$2. S \rightarrow ba$
-
-Example term : $ S \Rightarrow aSb \Rightarrow aaSbb \Rightarrow aababb $
-
-\note[item]{A recursive grammar locks you into the language and does not allow you introduce external ??quantifiers and logic??}
-
-\item Closed language,
-
-\begin{minted}[linenos]{haskell}
-data Term = Struct Atom [Term]
-	| Var VariableName
-	| Wildcard
-	| Cut Int deriving (Eq, Data, Typeable)
-\end{minted}
-\note[item]{Our expressions can only be  built using \progLang{Term} and nothing else.}
-
-\item Open language,
-\begin{minted}[linenos]{haskell}
-data FlatTerm a = Struct Atom [a]
-	|  Var VariableName
-	|  Wildcard
-	|  Cut Int deriving (Show, Eq, Ord)
-\end{minted}
-\note[item]{On the other hand, due to the addition of the type variable \haskellConstruct{a}, functionality can be injected into the language. }
-
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}[fragile=singleslide]
-\frametitle{{Functorizing a language}}
-\begin{itemize}
-
-\item Manual extension,
-\begin{minted}[linenos]{haskell}
-data Term = Struct Atom [Term]
-	| Var VariableName
-	| Wildcard
-	| Cut Int
-	| New_Constructor_1 .........
-	| New_Constructor_2 ......... 
-	deriving (Eq, Data, Typeable, .....)
-\end{minted}
-\note[item]{A manual extension would result in modying the base language and the operations related to it.}
-
-\item Functorized Extension,
-\begin{minted}[linenos]{haskell}
-data Extended f = New_Constructor_1 ...
-	| New_Constructor_2 ....
-	| Base (f (Extended f)) 
-	deriving (Eq, Data, Typeable, .....)
-\end{minted}
-\note[item]{Meanwhile, for the open language, a quantifier such as \haskellConstruct{Extended} can be used. }
-\end{itemize}
-\end{frame}
-
-%% ====================================================================-
-\subsection{Monadic Unification}
-\begin{frame}
-\frametitle{Monadic Unification}
-\note[item]{Here, we make use of the \codeLibrary{unification-fd} library }
-\begin{itemize}
-\item \codeLibrary{unification-fd} compatible
-\note[item]{Here, we make use of the \codeLibrary{unification-fd} library for providing the generic unification algorithm.}
-
-\item \textit{Unifiable} language.
-\note[item]{We create the necessary instances and make our language unifiable.}
-
-\item Convert the language expressions,    
-\note[item]{Convert the terms into \haskellConstruct{UTerm}}
-
-\item Extract and convert variables to become \haskellConstruct{State} compatible,
-\note[item]{the language varaibles are comnverted to state varaibles which store, pass and mutate values.}
-
-\item Carry out unification in the \haskellConstruct{Binding Monad}.
-\note[item]{The variables are bound to values representing substituions}
-
-\item Re translate substitutions.
-\note[item]{Extract state from the monad and translate the substitutions to the original language.}
-\end{itemize}
-
-\end{frame}
-
 
 %% ====================================================================-
 \subsection{Prototype 1}
+
+\begin{frame}[fragile=singleslide]
+	\frametitle{{Functorizing a language}}
+	\begin{itemize}
+		\item Consider the following recursive grammar,
+		
+		
+		$1.  S \rightarrow aSb$
+		
+		
+		$2. S \rightarrow ba$
+		
+		Example term : $ S \Rightarrow aSb \Rightarrow aaSbb \Rightarrow aababb $
+		
+		\note[item]{A recursive grammar locks you into the language and does not allow you introduce external ??quantifiers and logic??}
+		
+		\item Closed language,
+		
+		\begin{minted}[linenos]{haskell}
+		data Term = Struct Atom [Term]
+		| Var VariableName
+		| Wildcard
+		| Cut Int deriving (Eq, Data, Typeable)
+		\end{minted}
+		\note[item]{Our expressions can only be  built using \progLang{Term} and nothing else.}
+		
+		\item Open language,
+		\begin{minted}[linenos]{haskell}
+		data FlatTerm a = Struct Atom [a]
+		|  Var VariableName
+		|  Wildcard
+		|  Cut Int deriving (Show, Eq, Ord)
+		\end{minted}
+		\note[item]{On the other hand, due to the addition of the type variable \haskellConstruct{a}, functionality can be injected into the language. }
+		
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}[fragile=singleslide]
+	\frametitle{{Functorizing a language}}
+	\begin{itemize}
+		
+		\item Manual extension,
+		\begin{minted}[linenos]{haskell}
+		data Term = Struct Atom [Term]
+		| Var VariableName
+		| Wildcard
+		| Cut Int
+		| New_Constructor_1 .........
+		| New_Constructor_2 ......... 
+		deriving (Eq, Data, Typeable, .....)
+		\end{minted}
+		\note[item]{A manual extension would result in modying the base language and the operations related to it.}
+		
+		\item Functorized Extension,
+		\begin{minted}[linenos]{haskell}
+		data Extended f = New_Constructor_1 ...
+		| New_Constructor_2 ....
+		| Base (f (Extended f)) 
+		deriving (Eq, Data, Typeable, .....)
+		\end{minted}
+		\note[item]{Meanwhile, for the open language, a quantifier such as \haskellConstruct{Extended} can be used. }
+	\end{itemize}
+\end{frame}
+
 \begin{frame}
-\frametitle{Contributions}
-\begin{itemize}
-\item
-\end{itemize}
+	\frametitle{Monadic Unification}
+	\note[item]{Here, we make use of the \codeLibrary{unification-fd} library }
+	\begin{itemize}
+		\item \codeLibrary{unification-fd} compatible
+		\note[item]{Here, we make use of the \codeLibrary{unification-fd} library for providing the generic unification algorithm.}
+		
+		\item \textit{Unifiable} language.
+		\note[item]{We create the necessary instances and make our language unifiable.}
+		
+		\item Convert the language expressions,    
+		\note[item]{Convert the terms into \haskellConstruct{UTerm}}
+		
+		\item Extract and convert variables to become \haskellConstruct{State} compatible,
+		\note[item]{the language varaibles are comnverted to state varaibles which store, pass and mutate values.}
+		
+		\item Carry out unification in the \haskellConstruct{Binding Monad}.
+		\note[item]{The variables are bound to values representing substituions}
+		
+		\item Re translate substitutions.
+		\note[item]{Extract state from the monad and translate the substitutions to the original language.}
+	\end{itemize}
+	
 \end{frame}
 
 \begin{frame}{Prototype 1}
