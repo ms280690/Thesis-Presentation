@@ -982,10 +982,16 @@ direction for solving the problem of embedding languages.}
 
 \begin{frame}{Prototype 1}
 \begin{figure}[H]
-  \includegraphics[width=1\textwidth]{Prototype-1-architecture.jpeg}
+  \includegraphics[width=1\textwidth, height=0.8\textheight]{Prototype-1-architecture.jpeg}
   \caption{Architecture of Prototype 1}
   \label{fig:proto1-arch}
 \end{figure}
+\note[item]{Let us take a look at the architecture for Prototype 1.}
+\note[item]{We adopt a sample \progLang{Prolog}-like language}
+\note[item]{The language is open up by introdcing a type variable.}
+\note[item]{Make the language unifiable.}
+\note[item]{Perform the unification in the monad.}
+\note[item]{State is used to extract the substituion and return the result.}
 \end{frame}
 
 
