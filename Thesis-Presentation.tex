@@ -551,6 +551,22 @@ steps (also called actions), in which each action is decorated with additional p
 \end{itemize}
 
 \end{frame}
+	
+\begin{frame}[fragile]
+
+\frametitle{Pattern Matching}
+\begin{itemize}
+\item In pattern matching, we attempt to match values against patterns and, if so desired, bind variables to successful matches.
+\note[item]{In pattern matching, we matry and match values against patterns to bind values to variables.}
+\note[item]{Pattern matching can either fail, succeed or diverge.}
+
+\item Consider the example of the fibonacci series in \progLang{Haskell}.
+\begin{minted}[linenos]{haskell}
+fib 0 = 0
+fib 1 = 1
+fib n = fib (n-1) + fib (n-2)
+\end{minted}
+\note[item]{\progLang{Haskell} selects the appropriate computation depending on the result of matching the value of n to the patterns one by one.}
 
 \item Unification
 \end{itemize}
