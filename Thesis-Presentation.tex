@@ -466,15 +466,29 @@ Implementing a language within another language.
 \note[item]{The aim of this approach to bring the target language functionalities to the host language.}
 \begin{itemize}
 \item Embedding \progLang{Prolog}.
-\note[item]{\progLang{Prolog} is a very popular choice for embedding.}
+\note[item]{\progLang{Prolog} is a very popular choice as a target language.}
 
-\item Target languages : \progLang{Java, Lisp, Scheme}.
+\item Host languages : \progLang{Java, Lisp, Scheme}.
+\note[item]{Implementations exist for languages like \progLang{Java, Lisp} and \progLang{Scheme}.}
 
-\item \progLang{Prolog} in \progLang{Haskell} : \codeLibrary{Mini Prolog} and \codeLibrary{prolog}.
-\note[item]{A \progLang{Prolog} implementation does exist for an older specification of \progLang{Haskell}.}
+\item \progLang{Prolog} in \progLang{Haskell} : 
+\note[item]{A few \progLang{Prolog} implementations do exist for \progLang{Haskell}.}
+\begin{itemize}
+\item \codeLibrary{Mini Prolog} : A micro \progLang{Prolog}-like language for an older specification for \progLang{Haskell} 98.
+
+\item \codeLibrary{prolog} : A \progLang{Prolog}-like interpreter which can be interacted through a REPL.
+\end{itemize}
+ \note[item]{None of these are currently under active development and provide limited funcitonality. }
+ \note[item]{Though we use components from these implementations, they do not utilize the haskellian features that makes life a lot simpler as we shall see.}
 
 \item Logic programming in \progLang{Haskell}.
-\note[item]{Few unification and backtracking libraries do exist for \progLang{Haskell} which use monads to capture and maintain state.}
+\note[item]{For adding logic programming capabiliies to \progLang{Haskell} there exist,}
+\begin{itemize}
+\item Propositional logic,
+\item Backtracking, and,
+\item Unification.
+\end{itemize}
+\note[item]{libraries related to propositional logic, backtracking and unification.}
 \end{itemize}
 \end{frame}
 
