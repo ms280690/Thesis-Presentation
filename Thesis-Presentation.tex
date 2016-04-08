@@ -1139,7 +1139,29 @@ direction for solving the problem of embedding languages.}
 \subsection{Future Scope}
 \begin{frame}{Future Scope}
 \begin{itemize}
-\item
+\item Quasi quoter with antiquotation.
+\note[item]{Quasiquoting allows programmers to use custom, domain-specific syntax to construct fragments of their program.} 
+\note[item]{Antiquotation allows interchangeable usage of programming constructs of different languages in the same expression.}
+
+\item Variable run time search strategy.
+\note[item]{Currently prorotype 3 works with multiple search strategies but they need to specified at compile time. An addition would be enable the selection at run time.}
+
+\item Additional database capabilities similar to \progLang{SWI Prolog}.
+\note[item]{SWI \progLang{Prolog}, a popular \progLang{Prolog} distribution different database mechanisms.}
+\begin{itemize}
+\item \prologConstruct{assert/retract} database manipulation.
+\note[item]{}
+
+\item recorded database.
+\note[item]{database terms are associated with a key}
+\end{itemize}
+
+\item Multi type variable language.
+\note[item]{Currently the prototypes work with grammars with a single type. A multi type variable language would allow its contructotrs 
+to be of different types.}
+
+\item Prototype 4 additions and extension.
+\note[item]{Additions and extension could be made to in the form of a hybrid constructor representing pure and impure operations.}
 \end{itemize}
 
 \end{frame}
