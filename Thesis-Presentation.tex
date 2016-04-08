@@ -81,6 +81,7 @@
 \usepackage{tikz}
 \usepackage{comment}
 \usepackage{minted}
+\usepackage{pgfpages}
 %---------------------------------------------------------------------------------------------
 %%  This file is really -*-LaTeX-*-
 %%             File:  thesis-macros.sty
@@ -142,7 +143,10 @@
 \begin{document}
 	\setbeamertemplate{footline}[frame number]
 	\setbeamertemplate{itemize items}[circle]
+	
 	\setbeameroption{show notes} % un-comment to see the notes
+	\setbeameroption{show notes on second screen=right}
+	
 	\begin{frame}
 		\titlepage % Print the title page as the first slide
 		\note[item]{Good afternoon everybody. My name is Mehul Solanki. I am a graduate student in the computer science department 
