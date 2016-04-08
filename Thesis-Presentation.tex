@@ -413,15 +413,16 @@ Programming in a functional language consists of building definitions and using 
 
 %% -------------------------------------------------------------------
 \begin{frame}[fragile]{Functional Programming}
+\note[item]{A few more details on functional programming,}
 \begin{itemize}
 \item $\lambda$-calculi, is a formal system in mathematical logic for expressing computations.
-\note[item]{Fucntional programming works by applying mathematical functions to arguments to get results. A program is not but functions 
-which can also be passed to other functions as arguments.}
+\note[item]{Fucntional programming works by applying mathematical functions to arguments to get results. A program is nothing but 
+functions which can also be passed to other functions as arguments.}
 
 \note[item]{The typed variant of $\lambda$-calculi puts restrictions on the type of data a function can work with.}
 
 \item Damas-Hindley-Milner type system provides the ability to give a most general type to a function or program.
-
+\note[item]{It is based on the Damas-Hindley-Milner type system which provides the most general type to a function or program.}
 \begin{minted}[linenos]{haskell}
 add :: Int -> Int -> Int
 add x y = x + y
