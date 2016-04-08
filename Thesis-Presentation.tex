@@ -641,18 +641,25 @@ capabilities.}
 \begin{frame}
 	\frametitle{Monads}
 \begin{itemize}
-\item Monads in \progLang{Haskell} can be thought of as composable computation descriptions. The essence of monad is thus separation of 
-composition timeline from the composed computation's execution timeline, as well as the ability of computation to implicitly carry extra 
-data, as pertaining to the computation itself, in addition to its one (hence the name) output, that it will produce when run (or queried, 
-or called upon). 
+\item Monads in \progLang{Haskell} can be thought of as composable computation descriptions. They,
+\note[item]{Monads are composable computation builders.}
+\begin{itemize}
+\item separate composition and computation execution time line,
+\note[item]{separate how computations are composed and how they will be executed.}
+
+\item carry and pass around data(state).
+\note[item]{they hold results of the computation.}
+\end{itemize}
+\note[item]{This allows us to manipulat the control flow.}
+
 \note[item]{This lends monads to supplementing pure calculations with features like I/O, common environment or state, etc.}
 
-\item A monad is a structure that represents computations defined as sequences of steps: a type with a monad structure defines what it means to 
-chain operations, or nest functions of that type together. 
-\note[item]{This allows the programmer to build pipelines that process data in a series of 
-steps (also called actions), in which each action is decorated with additional processing rules provided by the monad.}
+\item A monad is a structure that represents computations defined as sequences of steps.
+\note[item]{Computations are a sequence of steps chained together.}
 
-\item A monad is a parameterized type which is an instance of the Monad type class, which defines >>= along with a few other operators.
+\item The monadic bubble.
+\note[item]{Computations that produce side effects are carried out in a monad, a bubble, which prevents the outer state to get affected 
+and hence the computation remains.}
 
 \end{itemize}
 
