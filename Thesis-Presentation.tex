@@ -179,9 +179,8 @@
 \section{Background}
 
 %% -------------------------------------------------------------------
-\begin{frame}{Background Overview}
-\frametitle{Background Overview}
-
+\begin{frame}{Overview}
+To provide background, I will discuss:
 \begin{itemize}
 \note[item]{In this section we will talk about,}
 \item Programming languages and \progLang{Haskell} and \progLang{Prolog}.
@@ -209,8 +208,9 @@
 \begin{columns}[T]
     \begin{column}{.4\textwidth}
      \begin{block}{}
-A programming language is an artificial language designed to communicate instructions to a machine, particularly a computer.
-\\*For example, \textsc{C, Java}.
+A programming language is an artificial language designed to communicate
+instructions to a machine, particularly a computer. 
+For example: \textsc{C}, \textsc{Java}.
     \end{block}
     \end{column}
     \begin{column}{.6\textwidth}
@@ -235,18 +235,18 @@ A programming language is an artificial language designed to communicate instruc
   \begin{columns}[T]
     \begin{column}{.7\textwidth}
      \begin{block}{}
-\progLang{Haskell} is an advanced purely-functional programming language. In particular, it is a 
+\progLang{Haskell} is an advanced purely-functional programming language. In particular, it 
 \begin{itemize}
-\item Polymorphically statically typed,
+\item is polymorphically statically typed;
 \note[item]{which is statically typed meaning every expression in Haskell has a type which is determined at compile time.}
 
-\item Type inference,
+\item has type inference;
 \note[item]{has type type inference meaning you don't have to explicitly write out every type in a Haskell program.}
 
-\item Lazy,
+\item is lazy;
 \note[item]{is lazy meaning functions don't evaluate their arguments until required.}
 
-\item Purely Functional.
+\item and is purely functional.
 \note[item]{and is purely funcitonal meaning every function in Haskell is a function in the mathematical sense (i.e., "pure").}
 \end{itemize}
 
@@ -275,8 +275,8 @@ A programming language is an artificial language designed to communicate instruc
   \begin{columns}[T]
     \begin{column}{.6\textwidth}
      \begin{block}{}
-General purpose logic programming language with over 20 distributions. \progLang{Prolog} is a programming language borrowing its basic 
-constructs from logic. A pure \progLang{Prolog} program is a logic program, in which an order is defined for both clauses in the program and 
+\progLang{Prolog} is a general purpose logic programming language with over 20 distributions. It borrows its basic 
+constructs from logic. However, it has an order is defined for both clauses in the program, and 
 for goals in the body of the clause.
 \note[item]{\progLang{Prolog} is a general purpose programming language in which programs consist of facts and rules used to solve a 
 query.}
@@ -304,7 +304,7 @@ query.}
     \begin{column}{.4\textwidth}
      \begin{block}{}
 A programming paradigm is a fundamental style of computer programming, a way of building the structure and elements of computer programs.
-\\*For example, Object Oriented Programming.
+\\*For example, Object Oriented Programming is programming language paradigm.
     \end{block}
     \end{column}
     \begin{column}{.6\textwidth}
@@ -360,13 +360,14 @@ Advantages of Declarative Programming Lloyd, J.W]}
 \item Programming in a functional language consists of building definitions and using the computer to evaluate expressions.
 \note[item]{A funcitonal language is all about building and applying functions.}
 
-\item In logic programming, a program consists of a collection of statements ex-pressed as formulas in symbolic logic. There are rules of 
+\item In logic programming, a program consists of a collection of statements expressed as formulas in symbolic logic. There are rules of 
 inference from logic that allow a new formula to be derived from old ones, with the guarantee that if the old formulas are true, so is the 
 new one.
 \note[item]{Logic programming allows a new formula to be derived from the old ones. A logic programming consists of a set of facts and 
 rules. And these are used to solve a query.}
 
-\item For example, \progLang{Haskell}(functional language) and \progLang{Prolog}(logic language).
+\item For example, \progLang{Haskell} (functional language) and
+  \progLang{Prolog} (logic language).
 \note[item]{\progLang{Haskell} is a functional programming language while \progLang{Prolog} is a logic programming language.}
 \note[item]{Both of them are declarative in nature but work differently.}
 
