@@ -735,14 +735,50 @@ Y = t(k)
 
 \begin{minted}[linenos,gobble=2]{prolog}
   h(f(W),S,g(U,y)) = h(U,V,g(f(x),V))
+\end{minted}
+\dots
+
+\end{itemize}
+	
+\end{frame}
+%% -------------------------------------------------------------------
+
+%% -------------------------------------------------------------------
+\begin{frame}[fragile] 
+\frametitle{Unification Examples} 
+\note[item]{Let us take a look at a few examples,}
+\begin{itemize}
+\item Unifying variables,
+
+\begin{minted}[linenos]{prolog} 
+(X,2) = (1,Y). 
+X = 1. 
+Y = 2.  
+\end{minted}
+\note[item]{In the first example, \prologConstruct{X} is instantiated to 1 and \prologConstruct{Y} to 2.}
+
+\item  Unifying complex terms,
+
+\begin{minted}[linenos]{prolog} 
+k(s(g),Y) = k(X,t(k)). 
+X = s(g) 
+Y = t(k) 
+\end{minted} 
+\note[item]{The first check is to match the head of the two terms \prologConstruct{k}, next the arity and finally \prologConstruct{X} and
+\prologConstruct{Y} are instantiated.}
+
+\item  Unification is not always easy\dots
+
+\begin{minted}[linenos,gobble=2]{prolog}
+  h(f(W),S,g(U,y)) = h(U,V,g(f(x),V))
   W=x
   U=f(x)
   S=V=y
 \end{minted}
-
 \end{itemize}
-	
-\end{frame} 
+\end{frame}
+%% -------------------------------------------------------------------
+
 
 %% ====================================================================-
 
