@@ -403,24 +403,24 @@ Programming in a functional language consists of building definitions and using 
 \begin{frame}[fragile]{Functional Programming}
 \note[item]{A few more details on functional programming,}
 \begin{itemize}
-\item $\lambda$-calculi, is a formal system in mathematical logic for expressing computations.
+\item Functional programming is all about functions.
 \note[item]{Fucntional programming works by applying mathematical functions to arguments to get results. A program is nothing but 
-functions which can also be passed to other functions as arguments.}
+	functions which can also be passed to other functions as arguments.}
 
+\item $\lambda$-calculi, is a formal system in mathematical logic for expressing computations.
+\note[item]{$\lambda$-calculi, is a formal system in mathematical logic for expressing computations.}
 \note[item]{The typed variant of $\lambda$-calculi puts restrictions on the type of data a function can work with.}
 
-\item Damas-Hindley-Milner type system provides the ability to give a most general type to a function or program.
+\item For example, \progLang{Haskell} uses the Damas-Hindley-Milner type system provides the ability to give a most general type to a function or program.
 \note[item]{It is based on the Damas-Hindley-Milner type system which provides the most general type to a function or program.}
 \begin{minted}[linenos]{haskell}
-add :: Int -> Int -> Int
+add :: Num a => a -> a -> a
 add x y = x + y
 \end{minted}
 
-\note[item]{For example, the \haskellConstruct{add} function takes as input two integers and returns their sum as the result.}
+\note[item]{For example, the \haskellConstruct{add} function takes as input numbers integers and returns their sum as the result.}
 
-\item For example, \progLang{Scheme} and \progLang{Lisp}.
-
-\item Side-effect free.
+\item Functional programs are mostly side-effect free.
 \note[item]{Functional programs are side-effect free, meaning, the state is not modified in any way when the functions are executed.}
 \note[item]{Our \haskellConstruct{add} function does not change the values of x or y and just returns their sum.}
 \end{itemize}
