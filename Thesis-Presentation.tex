@@ -445,13 +445,14 @@ Implementing a language within another language.
 \begin{itemize}
 \item Foreign Function Interface (FFI)
  \\* A mechanism by which a program written in one programming language can make use of services written in another language. 
-\\* For example, \progLang{Haskell} provides a mechanism to embed \progLang{C} code in its programs.
 \note{A foreign function interface allows programs to cooperate with programs written with other languages.}
+\\* For example, \progLang{Java} provides a mechanism to embed code from other languages using the \progLang{Java} Native Interface (JNI).
+\note[item]{For exmple, \progLang{Java} provides the \progLang{Java} Native Interface to interact with programs written in other languages.}
 
 \item Library or Module Extension
 \\* Replicate the features and characteristics of the target language into the host. 
-\\* For example, \progLang{LogLisp} is \progLang{Prolog} library for \progLang{Lisp}. 
-\note[item]{A micro language is implemented using the host language constructs to replicate the target language.}
+\\* For example, the \codeLibrary{SAX} library is an \progLang{XML} library extension for \progLang{Java}. 
+\note[item]{The SAX parser can be used to process and use XML data.}
 \end{itemize}
 
 \end{frame}
