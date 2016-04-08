@@ -537,7 +537,103 @@ intermixing constructs from different paradigms.
 
 
 %% ====================================================================-
-\subsection{Additional Concepts}
+%% ====================================================================-
+\section{The Problem}
+
+%% ====================================================================-
+\subsection{Language Selection}
+%% -------------------------------------------------------------------
+\begin{frame}
+	\frametitle{Choosing a Language}
+	\note[item]{The versatility of a programming language is how well it can adapt to a particular problem.}
+
+ \begin{columns}[T]
+  \begin{column}{0.5\textwidth}
+   \begin{block}{General Purpose Language}
+    \textcolor{dark-green}{Broad scope} but \textcolor{red}{problem needs to be moulded according to the capability of the language}.
+    \note[item]{A truly general purpose programming language, GPL, is described which contains facilities for constructing (within the 
+     language) new data types as well as facilities for operations performed upon them.[Jan V. Garwick. 1968. Programming Languages: GPL, a 
+     truly general purpose language. Commun. ACM 11, 9 (September 1968), 634-638. DOI=http://dx.doi.org/10.1145/364063.364092]}
+   \end{block}
+  \end{column}
+
+  \begin{column}{0.5\textwidth}
+   \begin{block}{Special Purpose Language}
+    \textcolor{red}{Limited scope} but \textcolor{dark-green}{easier to express the problem as the suitable capabilities are readily available}. 
+ 	 \note[item]{A domain specific language is a concise micro language that offers tools and functionalities focused on solving problems 
+ 	 in a particular domain.} 
+   \end{block}
+  \end{column}
+ \end{columns}
+
+\begin{itemize}
+\item For example, "Clarissa", a voice user interface for browsing procedures on the International Space Station.
+	\note[item]{For instance, \progLang{Prolog} is good for rule based systems. "Clarissa", a voice user interface for browsing space station procedures is written in SICStus
+		Prolog[https://ti.arc.nasa.gov/m/pub-archive/999h/0999\%20\%28Rayner\%29.pdf].}
+	\note[item]{Simply speaking, it is like "siri" for the International Space Station.}
+\end{itemize}
+ 
+\end{frame}
+%% -------------------------------------------------------------------
+
+\begin{comment}
+	%% ====================================================================-
+\subsection{Languages}
+\begin{frame}{Languages}
+\begin{itemize}
+\item Selection
+\note[item]{Choosing a language is quite a daunting task. There are costs related to migration, training among others.}
+
+\item Replicating functionality.
+\note[item]{One option is to replicate the target language funcitonality in the current environment, and that is what we will look at 
+today. Replicating \progLang{Prolog}-like functionality in \progLang{Haskell}}
+\note[item]{The result is something close to a \textit{haskellised} \progLang{Prolog}, a functional eDSl with logic programming 
+capabilities.}
+
+\end{itemize}
+
+\end{frame}
+\end{comment}
+
+%% ====================================================================-
+\begin{frame}
+\frametitle{Programmer's Dilemma}
+\note[item]{Choosing a language is quite a daunting task. There are costs related to migration, training among others.}
+\note[item]{And not to mention the options.}
+\begin{figure}
+    \includegraphics[height = 0.6\textwidth, width=0.6\textwidth]{programming-languages_2.png} 
+    \caption{The Graph of programming Languages}
+ \end{figure} 
+ \note[item]{}
+\end{frame}
+
+%% ====================================================================-
+\subsection{Problem Statement}
+\begin{frame}
+   \frametitle{Thesis Statement}
+   \begin{block}{Thesis statement}
+     The thesis aims to provide insights into merging two declarative
+     languages namely, \progLang{Haskell} and \progLang{Prolog} by
+     embedding the latter into the former and analyzing the result of
+     doing so\dots\,.
+   \end{block}
+        \begin{itemize}
+      \item Replicating functionality.
+      \note[item]{One option is to replicate the target language funcitonality in the current environment,}
+      
+      \item \progLang{Prolog}-like functionality in \progLang{Haskell}.
+      \note[item]{, and that is what we will look at today. Replicating \progLang{Prolog}-like functionality in \progLang{Haskell}}
+      
+      \item \textit{haskellised} \progLang{Prolog}-like eDSL
+      \note[item]{The result is something close to a \textit{haskellised} \progLang{Prolog}, a functional eDSL with logic programming 
+         capabilities.}
+   \end{itemize}
+\end{frame}
+
+%% ====================================================================-
+%% ====================================================================-
+\section{Additional Concepts}
+%% -------------------------------------------------------------------
 \begin{frame}
 	\frametitle{Monads}
 \begin{itemize}
@@ -557,7 +653,9 @@ steps (also called actions), in which each action is decorated with additional p
 \end{itemize}
 
 \end{frame}
+%% -------------------------------------------------------------------
 	
+%% -------------------------------------------------------------------
 \begin{frame}[fragile]
 
 \frametitle{Pattern Matching}
@@ -577,7 +675,9 @@ fib n = fib (n-1) + fib (n-2)
 \end{itemize}
 
 \end{frame}
+%% -------------------------------------------------------------------
 
+%% -------------------------------------------------------------------
 \begin{frame}
 \frametitle{Unification}
 \begin{itemize}
@@ -598,6 +698,7 @@ the variable instantiations are compatible.
 
 \end{itemize}
 \end{frame}
+%% -------------------------------------------------------------------
 
 
 %% ====================================================================-
@@ -647,96 +748,10 @@ particular domain.}
 
 %% ====================================================================-
 %% ====================================================================-
-\section{The Problem}
-
-%% ====================================================================-
-\subsection{Language Selection}
-\begin{frame}
-	\frametitle{Choosing a Language}
-	\note[item]{The versatility of a programming language is how well it can adapt to a particular problem.}
-
- \begin{columns}[T]
-  \begin{column}{0.5\textwidth}
-   \begin{block}{General Purpose Language}
-    \textcolor{dark-green}{Broad scope} but \textcolor{red}{problem needs to be moulded according to the capability of the language}.
-    \note[item]{A truly general purpose programming language, GPL, is described which contains facilities for constructing (within the 
-     language) new data types as well as facilities for operations performed upon them.[Jan V. Garwick. 1968. Programming Languages: GPL, a 
-     truly general purpose language. Commun. ACM 11, 9 (September 1968), 634-638. DOI=http://dx.doi.org/10.1145/364063.364092]}
-   \end{block}
-  \end{column}
-
-  \begin{column}{0.5\textwidth}
-   \begin{block}{Special Purpose Language}
-    \textcolor{red}{Limited scope} but \textcolor{dark-green}{easier to express the problem as the suitable capabilities are readily available}. 
- 	 \note[item]{A domain specific language is a concise micro language that offers tools and functionalities focused on solving problems 
- 	 in a particular domain.} 
-   \end{block}
-  \end{column}
- \end{columns}
-
-\begin{itemize}
-\item For example, "Clarissa", a voice user interface for browsing procedures on the International Space Station.
-	\note[item]{For instance, \progLang{Prolog} is good for rule based systems. "Clarissa", a voice user interface for browsing space station procedures is written in SICStus
-		Prolog[https://ti.arc.nasa.gov/m/pub-archive/999h/0999\%20\%28Rayner\%29.pdf].}
-	\note[item]{Simply speaking, it is like "siri" for the International Space Station.}
-\end{itemize}
- 
-\end{frame}
-
-\begin{comment}
-	%% ====================================================================-
-\subsection{Languages}
-\begin{frame}{Languages}
-\begin{itemize}
-\item Selection
-\note[item]{Choosing a language is quite a daunting task. There are costs related to migration, training among others.}
-
-\item Replicating functionality.
-\note[item]{One option is to replicate the target language funcitonality in the current environment, and that is what we will look at 
-today. Replicating \progLang{Prolog}-like functionality in \progLang{Haskell}}
-\note[item]{The result is something close to a \textit{haskellised} \progLang{Prolog}, a functional eDSl with logic programming 
-capabilities.}
-
-\end{itemize}
-
-\end{frame}
-\end{comment}
-
-%% ====================================================================-
-\begin{frame}
-\frametitle{Programmer's Dilemma}
-\note[item]{Choosing a language is quite a daunting task. There are costs related to migration, training among others.}
-\note[item]{And not to mention the options.}
-\begin{figure}
-    \includegraphics[height = 0.6\textwidth, width=0.6\textwidth]{programming-languages_2.png} 
-    \caption{The Graph of programming Languages}
- \end{figure} 
- \note[item]{}
-\end{frame}
-
-%% ====================================================================-
-\subsection{Problem Statement}
-\begin{frame}
-	\frametitle{Problem Statement}
-	\begin{itemize}
-		\item Replicating functionality.
-		\note[item]{One option is to replicate the target language funcitonality in the current environment,}
-		
-		\item \progLang{Prolog}-like functionality in \progLang{Haskell}.
-		\note[item]{, and that is what we will look at today. Replicating \progLang{Prolog}-like functionality in \progLang{Haskell}}
-		
-		\item \textit{haskellised} \progLang{Prolog}-like eDSL
-		\note[item]{The result is something close to a \textit{haskellised} \progLang{Prolog}, a functional eDSL with logic programming 
-			capabilities.}
-	\end{itemize}
-\end{frame}
-
-%% ====================================================================-
-%% ====================================================================-
 \section{What was done}
 
 \begin{frame}
-\frametitle{Existing Work}
+\frametitle{Previously Existing Work}
 \note[item]{Here we will look at the existing work,}
 \begin{itemize}
 \item Implementations.
@@ -829,6 +844,8 @@ note[item]{In this section we will talk about, the contributions which are not n
 \end{itemize}
 
 \end{frame}
+%% -------------------------------------------------------------------
+
 
 %% ====================================================================-
 \begin{comment}
