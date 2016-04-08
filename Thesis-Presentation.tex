@@ -350,7 +350,7 @@ Programming languages are classified into paradigms depending on their character
 \begin{frame}
 \frametitle{Declarative Programming}
 \begin{itemize}
-\item Declarative style of programming, describe (declaratively) what to do and not (operationally) how to do it. 
+\item Declarative style of programming, describes (declaratively) what to do and not (operationally) how to do it. 
 \note[item]{http://www.eolss.net/sample-chapters/c15/e6-45-05-04.pdf}
 \note[item]{One such style is the declarative paradigm, where we describe the logic of a computation without the control flow.[Practical 
 Advantages of Declarative Programming Lloyd, J.W]}
@@ -360,11 +360,10 @@ Advantages of Declarative Programming Lloyd, J.W]}
 \item Programming in a functional language consists of building definitions and using the computer to evaluate expressions.
 \note[item]{A funcitonal language is all about building and applying functions.}
 
-\item In logic programming, a program consists of a collection of statements expressed as formulas in symbolic logic. There are rules of 
-inference from logic that allow a new formula to be derived from old ones, with the guarantee that if the old formulas are true, so is the 
-new one.
+\item In logic programming, a program consists of a collection of statements expressed as formulas in symbolic logic. 
 \note[item]{Logic programming allows a new formula to be derived from the old ones. A logic programming consists of a set of facts and 
 rules. And these are used to solve a query.}
+\note[item]{There are rules of inference from logic that allow a new formula to be derived from old ones, with the guarantee that if the old formulas are true, so is the new one.}
 
 \item For example, \progLang{Haskell} (functional language) and
   \progLang{Prolog} (logic language).
@@ -440,10 +439,8 @@ Implementing a language within another language.
 \note[item]{This section deals with embedding a target language in the host environement.}
 \note[item]{The aim of this approach to bring the target language functionalities to the host language.}
 \begin{itemize}
-\item Embedding \progLang{Prolog}.
+\item \progLang{Prolog} has been embedded in host languages such as \progLang{Java, Lisp, Scheme}.
 \note[item]{\progLang{Prolog} is a very popular choice as a target language.}
-
-\item Host languages : \progLang{Java, Lisp, Scheme}.
 \note[item]{Implementations exist for languages like \progLang{Java, Lisp} and \progLang{Scheme}.}
 
 \item \progLang{Prolog} in \progLang{Haskell} : 
@@ -498,8 +495,11 @@ intermixing constructs from different paradigms.
   \note[item]{is a \progLang{Haskell} based functional logic programming language providing the choice operator for non deterministic
     operations along with two way pattern matching.}
 
-\item \progLang{Mercury}.
+\item \progLang{Mercury},
   \note[item]{which goes the other way round, starting from \progLang{Prolog} and adding \progLang{Haskell} features.}
+  
+ \item others (see Chapter 6).
+ \note[item]{}
 \end{itemize}
 \end{itemize}
 
@@ -859,9 +859,9 @@ Monad}.}
 \section{What we did}
 
 %% -------------------------------------------------------------------
-\begin{frame}{What we did Overview}
+\begin{frame}{Overview of what we did }
 	
-	\frametitle{What we did Overview}
+	\frametitle{Overview of what we did }
 \begin{itemize}
 \item Literature review
   \begin{itemize}
@@ -1062,7 +1062,7 @@ direction for solving the problem of embedding languages.}
 \item A query resolver matches a query to the rules in the knowledge base and generate a list of goals which when achieved a result is returned.
 \note[item]{A query resolver matches a query to the rules in the knowledge base and generate a list of goals which when achieved a result is returned.}
 
-\item A query resolver consists of,
+\item A query resolver consists of:
 \begin{itemize}
 \item a scheduling policy,
 \note[item]{ defines how the additions and deletions of goals from the resolvent is performed by the interpreter.}
@@ -1107,7 +1107,7 @@ accommodate an open grammar for the language and monadic unification.}
 \frametitle{Contributions}
 \note[item]{Prototype 2 demonstrated how the procedure can be applied to recursive grammars and carry out unification irrespective of the scheduling policy of the interpreter.}
 \begin{itemize}
-\item Variable search strategy,
+\item Variable search strategy:
 \note[item]{In Prototype 3 we work with variable search strategies.}
 \note[item]{The base implementation is based on a \progLang{Prolog}-like interpreter for \progLang{Haskell 98}.}
 
@@ -1210,8 +1210,19 @@ to be of different types.}
 \section{Conclusion}
 %% ---------------------------------------------------------------------
 \begin{frame}{Conclusion}
-In conclusion, we  explored the various approaches for bringing languages together. We looked at the state and support for embedded domain specific languages in \progLang{Haskell}. Specifically, we looked at \progLang{Prolog} in 
-\progLang{Haskell}. Our ideas were tested by the means of some prototypes to find out that \progLang{Haskell} is an effective tool for embedding.  Lastly, we contributed towards solving the programmer's dilemma of choosing programming languages.
+In conclusion,
+\begin{itemize}
+\item we explored the various approaches for bringing languages together. 
+
+\item We looked at the state and support for embedded domain specific languages in \progLang{Haskell}. 
+
+\item Specifically, we looked at \progLang{Prolog} in \progLang{Haskell}. 
+
+\item Our ideas were tested by the means of some prototypes to find out that \progLang{Haskell} is an effective tool for embedding.  
+
+\item Lastly, we contributed towards solving the programmer's dilemma of choosing programming languages.
+\end{itemize}
+
 
 \end{frame}
 %% ---------------------------------------------------------------------
