@@ -701,28 +701,25 @@ the variable instantiations are compatible.
 
 \item Two terms unify if and only if it follows from the previous three clauses that they unify.
 \end{itemize}
-
 \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]
-\frametitle{Unification Examples}
-
-\begin{minted}[linenos]{prolog}
-(X,2) = (1,Y).
-X = 1.
-Y = 2. 
-\end{minted}
-\begin{minted}[linenos]{prolog}
-k(s(g),Y) = k(X,t(k)).
-X = s(g)
-Y = t(k)
-\end{minted}
-
-\end{frame}
-
 %% -------------------------------------------------------------------
-
+\begin{frame}[fragile] 
+	\frametitle{Unification Examples} 
+	
+	\begin{minted}[linenos]{prolog} 
+	(X,2) = (1,Y). 
+	X = 1. 
+	Y = 2.  
+	\end{minted} 
+	\begin{minted}[linenos]{prolog} 
+	k(s(g),Y) = k(X,t(k)). 
+	X = s(g) 
+	Y = t(k) 
+	\end{minted} 
+	
+\end{frame} 
 
 %% ====================================================================-
 
