@@ -976,43 +976,36 @@ direction for solving the problem of embedding languages.}
 %% ====================================================================-
 \subsection{Prototype 1}
 
+%% -------------------------------------------------------------------
 \begin{frame}[fragile=singleslide]
-	\frametitle{{Functorizing a language}}
-	\begin{itemize}
-		\item Consider the following recursive grammar,
-		
-		
-		$1.  S \rightarrow aSb$
-		
-		
-		$2. S \rightarrow ba$
-		
-		Example term : $ S \Rightarrow aSb \Rightarrow aaSbb \Rightarrow aababb $
-		
-		\note[item]{A recursive grammar locks you into the language and does not allow you introduce external ??quantifiers and logic??}
-		
-		\item Closed language,
-		
-		\begin{minted}[linenos]{haskell}
-		data Term = Struct Atom [Term]
-		| Var VariableName
-		| Wildcard
-		| Cut Int deriving (Eq, Data, Typeable)
-		\end{minted}
-		\note[item]{Our expressions can only be  built using \progLang{Term} and nothing else.}
-		
-		\item Open language,
-		\begin{minted}[linenos]{haskell}
-		data FlatTerm a = Struct Atom [a]
-		|  Var VariableName
-		|  Wildcard
-		|  Cut Int deriving (Show, Eq, Ord)
-		\end{minted}
-		\note[item]{On the other hand, due to the addition of the type variable \haskellConstruct{a}, functionality can be injected into the language. }
-		
-	\end{itemize}
-	
+    \frametitle{{Functorizing a language}}
+    \begin{itemize}
+    \item Traditional abstract grammars are recursive and closed.
+    \item Open languages let other tools add, for instance,
+      unification variables.
+        \note[item]{A recursive grammar locks you into the language and does not allow you introduce external ??quantifiers and logic??}
+        
+      \item Closed language:
+        \begin{minted}[linenos,gobble=8]{haskell}
+          data Term = Struct Atom [Term]
+                    | Var VariableName
+                    | Wildcard
+                    | Cut Int deriving (Eq, Data, Typeable)
+        \end{minted}
+        \note[item]{Our expressions can only be  built using \progLang{Term} and nothing else.}
+        
+      \item Open language:
+        \begin{minted}[linenos,gobble=8]{haskell}
+          data FlatTerm a = Struct Atom [a]
+                          |  Var VariableName
+                          |  Wildcard
+                          |  Cut Int deriving (Show, Eq, Ord)
+        \end{minted}
+        \note[item]{On the other hand, due to the addition of the type variable \haskellConstruct{a}, functionality can be injected into the language. }
+    \end{itemize}
+    
 \end{frame}
+%% -------------------------------------------------------------------
 
 \begin{frame}[fragile=singleslide]
 	\frametitle{{Functorizing a language}}
