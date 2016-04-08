@@ -706,18 +706,29 @@ the variable instantiations are compatible.
 
 %% -------------------------------------------------------------------
 \begin{frame}[fragile] 
-	\frametitle{Unification Examples} 
-	
-	\begin{minted}[linenos]{prolog} 
-	(X,2) = (1,Y). 
-	X = 1. 
-	Y = 2.  
-	\end{minted} 
-	\begin{minted}[linenos]{prolog} 
-	k(s(g),Y) = k(X,t(k)). 
-	X = s(g) 
-	Y = t(k) 
-	\end{minted} 
+\frametitle{Unification Examples} 
+\note[item]{Let us take a look at a few examples,}
+\begin{itemize}
+\item Unifying varaibles,
+
+\begin{minted}[linenos]{prolog} 
+(X,2) = (1,Y). 
+X = 1. 
+Y = 2.  
+\end{minted}
+\note[item]{In the first example, \prologConstruct{X} is instantiated to 1 and \prologConstruct{Y} to 2.}
+
+\item  Unifying complex terms,
+
+\begin{minted}[linenos]{prolog} 
+k(s(g),Y) = k(X,t(k)). 
+X = s(g) 
+Y = t(k) 
+\end{minted} 
+\note[item]{The first check is to match the head of the two terms \prologConstruct{k}, next the arity and finally \prologConstruct{X} and
+\prologConstruct{Y} are instantiated.}
+
+\end{itemize}
 	
 \end{frame} 
 
